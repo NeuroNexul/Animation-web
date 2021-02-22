@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ParaLettersDance</title>
+  <style>*{margin: 0;padding: 0;box-sizing: border-box;}section{display: flex;justify-content: center;position: relative;align-items: center;min-height: 100vh;overflow: hidden;background-color: #130e23;}h3{position: absolute;display: block;color: #00cefe;text-align: center;}p{position: relative;text-align: center;color: #00cefe;margin: 20px;max-width: 650px;display: none;}span{display: inline-block;position: relative;}</style>
+</head>
+<body>
+    <section>
+        <h3>A Simple Annimation With Html!</h3>
+    	<p class="text"></p>
+    </section>
+<script src="anime.min.js"></script>
+<script>
+function start(){document.querySelector('h3').style.display = "none";document.querySelector('p').style.display = "block";}
+const text = document.querySelector('.text');
+const dexTxt = "Computer programming is the process that professionals use to write code that instructs how a computer, application or software program performs. At its most basic, computer programming is a set of instructions to facilitate specific actions. Computer programmers create instructions for a computer to execute by writing and testing code that enables applications and software programs to operate successfully.";
+const DefTxt = "Computer programming is the process that professionals use to write code that instructs how a computer, application or software program performs. At its most basic, computer programming is a set of instructions to facilitate specific actions.";
+var val = 500;if (window.innerWidth>600){text.innerText = dexTxt;val = 500;}else{text.innerText = DefTxt;val = 300;}text.innerHTML = text.textContent.replace(/\S/g,"<span>$&</span>");function animate(){const annimation = anime.timeline({targets : ".text span",easing : "easeInOutExpo",loop : true,});annimation.add({rotate : function(){return anime.random(-360,360)},translateX : function(){return anime.random(0-val,val)},translateY : function(){return anime.random(0-val,val)},duration : 5000,delay : anime.stagger(20),}).add({rotate : 0,translateX : 0,translateY : 0,duration : 5000,delay : anime.stagger(20),});}
+window.setTimeout(start,5000);window.setTimeout(animate,5000);
+</script>
+
+
+</body>
+</html>
