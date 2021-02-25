@@ -9,7 +9,7 @@ Purely Built With Simple HTML, CSS and JS...
 ### [3. Neon Text Scaning](https://arif-2005.github.io/Animation-web/neonScanedTxt.html)
 ### [4. The Ring of Fire](https://arif-2005.github.io/Animation-web/RingOfFire.html)
 ### [5. Mouse Move Animation](https://arif-2005.github.io/Animation-web/MouseMoveAnimation.html)
-
+### [6. Mouse Move Snake](https://arif-2005.github.io/Animation-web/MouseMoveSnake.html)
 
 
 
